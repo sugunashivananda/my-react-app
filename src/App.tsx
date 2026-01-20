@@ -12,10 +12,8 @@ const App: React.FC = () => {
       <h1>Welcome to the React App</h1>
       <p>This is some existing text above the button.</p>
       <div style={{ marginTop: '10px' }}>
-        <button onClick={handleClick} style={{ marginRight: '10px', padding: '8px 16px', fontSize: '16px' }}>
-          Click me
-        </button>
-        <span>Count: {count}</span>
+        <button onClick={handleClick}>Click me</button>
+        <span style={{ marginLeft: '10px' }}>Count: {count}</span>
       </div>
     </div>
   );
