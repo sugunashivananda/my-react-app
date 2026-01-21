@@ -1,20 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App: React.FC = () => {
+  const [count, setCount] = useState<number>(0);
+
+  const handleClick = (): void => {
+    setCount(count + 1);
+  };
 
   return (
-    <>
-      <div>
-      <p className="read-the-docs">
-        React counter example
-      </p>
-      </div>
-    </>
-  )
-}
+    <div>
+      <button onClick={handleClick}>Click Me</button>
+      <p>Counter: {count}</p>
+    </div>
+  );
+};
 
-export default App
+export default App;
